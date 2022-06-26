@@ -6,7 +6,7 @@ rem     システム設定一覧を取得する
 rem   構文
 rem     :USAGE 参照
 rem
-rem   Copyright (c) 2007-2017 Yukio Shiiya
+rem   Copyright (c) 2007-2022 Yukio Shiiya
 rem
 rem   This software is released under the MIT License.
 rem   https://opensource.org/licenses/MIT
