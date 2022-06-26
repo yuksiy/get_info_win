@@ -48,6 +48,7 @@ for /f "tokens=1" %%i in ('which_simple.bat package_ls.ps1') do set PACKAGE_LS=%
 for /f "tokens=1" %%i in ('which_simple.bat hotfix_ls.ps1') do set HOTFIX_LS=%%i
 for /f "tokens=1" %%i in ('which_simple.bat appxpackage_ls.ps1') do set APPXPACKAGE_LS=%%i
 set QFECHECK=%SystemRoot%\system32\qfecheck.exe
+for /f "tokens=1" %%i in ('which_simple.bat winget.exe') do set WINGET=%%i
 for /f "tokens=1" %%i in ('which_simple.bat dp_list.bat') do set DP_LIST=%%i
 for /f "tokens=1" %%i in ('which_simple.bat inetfw_netsh_main.bat') do set INETFW_NETSH_MAIN=%%i
 for /f "tokens=1" %%i in ('which_simple.bat schtasks_main.bat') do set SCHTASKS_MAIN=%%i
@@ -110,6 +111,12 @@ if not "%APPXPACKAGE_LS%"=="" (
 )
 if exist %QFECHECK% (
 	%QFECHECK% /v                                  > "%DEST_DIR%\QFECHECK.LOG"                     2>&1
+)
+if exist %WINGET% (
+	%WINGET% export                                  "%DEST_DIR%\WINGET_EXPORT.JSON"               > "%DEST_DIR%\WINGET_EXPORT.ERR"
+	%WINGET% features                              > "%DEST_DIR%\WINGET_FEATURES.LOG"              2>&1
+	%WINGET% list                                  > "%DEST_DIR%\WINGET_LIST.LOG"                  2>&1
+	%WINGET% source list                           > "%DEST_DIR%\WINGET_SOURCE_LIST.LOG"           2>&1
 )
 if exist "%CYGWINROOT%\bin\cygwin*.dll" (
 	%CYGWINROOT%\bin\cygcheck.exe -c               > "%DEST_DIR%\CYGCHECK-C.LOG"                   2>&1

@@ -36,6 +36,7 @@ Optional
 * [inetfw_tools](https://github.com/yuksiy/inetfw_tools)
 * [package_ls](https://github.com/yuksiy/package_ls)
 * [schtasks_tools](https://github.com/yuksiy/schtasks_tools)
+* [winget](https://docs.microsoft.com/en-us/windows/package-manager/winget/)
 * [wmi_ls](https://github.com/yuksiy/wmi_ls)
 
 ## インストール
