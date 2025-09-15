@@ -64,4 +64,4 @@ MIT License. See [LICENSE](https://github.com/yuksiy/get_info_win/blob/master/LI
 
 ## Copyright
 
-Copyright (c) 2007-2022 Yukio Shiiya
+Copyright (c) 2007-2025 Yukio Shiiya
