@@ -116,6 +116,7 @@ if exist %WINGET% (
 	%WINGET% export                                  "%DEST_DIR%\WINGET_EXPORT.JSON"               > "%DEST_DIR%\WINGET_EXPORT.ERR"
 	%WINGET% features                              > "%DEST_DIR%\WINGET_FEATURES.LOG"              2>&1
 	%WINGET% list                                  > "%DEST_DIR%\WINGET_LIST.LOG"                  2>&1
+	%WINGET% pin list                              > "%DEST_DIR%\WINGET_PIN_LIST.LOG"              2>&1
 	%WINGET% source list                           > "%DEST_DIR%\WINGET_SOURCE_LIST.LOG"           2>&1
 )
 if exist "%CYGWINROOT%\bin\cygwin*.dll" (
